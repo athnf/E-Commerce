@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Detail - ElvCoffee</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Platypi&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Platypi', sans-serif;
+    }
+    .underline-hover::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #EED6C4; /* Cream Tua */
+      transition: width 0.3s;
+    }
+    .underline-hover:hover::after {
+      width: 100%;
+    }
+    .hover-underline::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #EED6C4; /* Cream Tua */
+      transition: width 0.3s;
+    }
+    .hover-underline:hover::after {
+      width: 100%;
+    }
+    .bg-green {
+      background-color: #AF8F6F; /* Coklat Tua */
+    }
+    /* Tombol Animasi */
+    .btn-add-to-cart {
+      background-color: #6B4F4F; /* Coklat */
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .btn-add-to-cart:hover {
+      background-color: #483434; /* Coklat Tua */
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="bg-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- Nama Store -->
+      <div class="text-lg font-bold text-[#b5e5cf] hover-underline">
+        <a href="index.html">ElvCoffee</a>
+      </div>
+      <!-- Isi Navbar (Tengah) -->
+      <div class="hidden md:flex space-x-8">
+        <a href="shop.html" class="text-[#b5e5cf] underline-hover">
+          Shop
+        </a>
+        <a href="about.html" class="text-[#b5e5cf] underline-hover">
+          About
+        </a>
+      </div>
+      <!-- Cart (Pojok Kanan Atas) -->
+      <div class="text-[#b5e5cf]">
+        <a href="#" class="relative">
+          <i class="fas fa-shopping-cart text-xl"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Detail Produk -->
+  <div class="container mx-auto mt-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Gambar Produk -->
+      <div>
+        <img src="img/b1.png" alt="Nama Produk" class="w-full object-cover rounded-lg">
+      </div>
+      <!-- Info Produk -->
+      <div>
+        <h1 class="text-3xl font-bold mb-4">Shredded Bread</h1>
+         <P>• Roti Abon</P>
+         <p>• Toti dengan tekstur lembut</p>
+         <p>• Dengan isian berupa abon yang manis dan gurih</p> 
+         
+         <p>Shredded Bread
+          Merupakan roti dengan tekstur lembut di bagian luar dan crispy di bagian atasnya. Dilengkapi dengan isian berupa abon yang manis dan gurih di bagian dalamnya. Roti abon ini nikmat disantap dalam kondisi hangat.</p> 
+        <p>*Khusus toko tertentu.</p>
+        <p class="text-2xl font-semibold mb-4">Rp 10.500</p>
+        <button class="btn-add-to-cart flex items-center gap-2" onclick="addToCart()">
+          <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Keranjang -->
+  <div id="cartModal" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden">
+    <div class="bg-white p-8 rounded-lg">
+      <h2 class="text-2xl font-semibold mb-4">Keranjang</h2>
+      <p>Produk telah ditambahkan ke keranjang.</p>
+      <button class="btn-add-to-cart mt-4" onclick="closeModal()">Tutup</button>
+    </div>
+  </div>
+
+  <script>
+    function addToCart() {
+      document.getElementById('cartModal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('cartModal').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

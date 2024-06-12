@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ElvCoffee</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Platypi&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Platypi', sans-serif;
+    }
+    .underline-hover::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #EED6C4; /* Cream Tua */
+      transition: width 0.3s;
+    }
+    .underline-hover:hover::after {
+      width: 100%;
+    }
+    .hover-underline::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #EED6C4; /* Cream Tua */
+      transition: width 0.3s;
+    }
+    .hover-underline:hover::after {
+      width: 100%;
+    }
+    .bg-green {
+      background-color: #AF8F6F; /* Kopi */
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="bg-[#F8F4E1] p-4 flex justify-between items-center">
+    <!-- Nama Store -->
+    <div class="text-lg font-bold text-[#483434] hover-underline">
+      <a href="index.html">ElvCoffee</a>
+    </div>
+    <!-- Isi Navbar (Tengah) -->
+    <div class="flex space-x-8 flex-grow justify-center">
+      <a href="shop.html" class="text-[#483434] underline-hover">
+        Shop
+      </a>
+      <a href="about.html" class="text-[#483434] underline-hover">
+        About
+      </a>
+    </div>
+    <!-- Cart (Pojok Kanan Atas) -->
+    <div class="text-[#483434]">
+      <a href="#" class="relative">
+        <i class="fas fa-shopping-cart text-xl"></i>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Background Polos dengan Judul dan Slogan -->
+  <div class="bg-green p-8">
+    <h1 class="text-5xl font-bold text-white text-center">ElvCoffee</h1>
+    <p class="text-2xl text-white mt-4 text-center">"The Perfect Blend of Freshness"</p>
+  </div>
+  
+</body>
+</html>

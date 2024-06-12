@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - ElvCoffee</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Platypi&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Platypi', sans-serif;
+    }
+    .underline-hover::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #EED6C4; /* Cream Tua */
+      transition: width 0.3s;
+    }
+    .underline-hover:hover::after {
+      width: 100%;
+    }
+    .hover-underline::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #EED6C4; /* Cream Tua */
+      transition: width 0.3s;
+    }
+    .hover-underline:hover::after {
+      width: 100%;
+    }
+    .bg-green {
+      background-color: #AF8F6F; /* Kopi */
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="bg-[#F8F4E1] p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- Nama Store -->
+      <div class="text-lg font-bold text-[#483434] hover-underline">
+        <a href="index.html">ElvCoffee</a>
+      </div>
+      <!-- Isi Navbar (Tengah) -->
+      <div class="hidden md:flex space-x-8">
+        <a href="shop.html" class="text-[#483434] underline-hover">
+          Shop
+        </a>
+        <a href="about.html" class="text-[#483434] underline-hover">
+          About
+        </a>
+      </div>
+      <!-- Cart (Pojok Rantai Atas) -->
+      <div class="text-[#483434]">
+        <a href="#" class="relative">
+          <i class="fas fa-shopping-cart text-xl"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Konten About -->
+  <div class="bg-green p-8">
+    <h1 class="text-5xl font-bold text-white text-center mb-8">About Us</h1>
+    <p class="text-2xl text-white text-center max-w-4xl mx-auto">
+      Welcome to ElvCoffee, a coffee shop with all its uniqueness. Our mission is to provide you with the best products that meet your personal tastes and preferences. We believe in quality, variety and customer satisfaction. Thank you for choosing ElvCoffee as your main destination for quality coffee.
+    </p>
+
+    <!-- Daftar Anggota Kelompok -->
+    <div class="mt-12 text-white text-center">
+      <h2 class="text-3xl font-bold mb-4">Our Team</h2>
+      <ul class="list-disc list-inside">
+        <li>Anindya Vivia Putri - Project Manager</li>
+        <li>Abdillah Syeh Abu Bakar - Frontend Developer</li>
+        <li>Sulastri - Front End Developer</li>
+        <li>Ahmad Fadillah - UI/UX Designer</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
